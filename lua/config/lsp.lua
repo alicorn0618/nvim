@@ -188,6 +188,25 @@ if utils.executable("ltex-ls") then
 }
 end
 
+if utils.executable("rust-analyzer") then
+  lspconfig.rust_analyzer.setup {
+    on_attach = custom_attach,
+    cmd = { "rust-analyzer" },
+    filetypes = { "rust" },
+    settings = {
+      ["rust-analyzer"] = {
+        cargo = {
+          allFeatures = true,
+        },
+        procMacro = {
+          enable = true,
+        },
+      },
+    },
+    flags = { debounce_text_changes = 300 },
+  }
+end
+
 if utils.executable("clangd") then
   lspconfig.clangd.setup {
     on_attach = custom_attach,

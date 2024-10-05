@@ -502,7 +502,7 @@ local plugin_specs = {
     cmd = { "OSCYank", "OSCYankReg" },
   },
 
--- The missing auto-completion for cmdline!
+  -- The missing auto-completion for cmdline!
   {
     "gelguy/wilder.nvim",
     build = ":UpdateRemotePlugins",
