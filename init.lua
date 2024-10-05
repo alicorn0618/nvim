@@ -1,4 +1,14 @@
-local vim = vim
+-- load options
+require('options')
 
-require("basic")
-require("lazynvim-init")
+-- load keymappings
+require('keymaps')
+
+-- load lazy.nvim
+require('lazy-init')
+
+-- set colorscheme
+require('colorscheme')
+
+-- set lsp
+-- require('lsp')
